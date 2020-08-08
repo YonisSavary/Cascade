@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Yonis SAVARY">
+    <link rel="stylesheet" href="style.css">
+    <!-- codemirror main css -->
+    <link rel="stylesheet" href="lib/codemirror.css">
+    <!-- NEEDED FOR rubyblue THEME -->
+    <link rel="stylesheet" href="lib/themes/rubyblue.css"> 
+    <title>Cascade</title>
+</head>
+<body class="f-column">
+    <header>
+        <h1 class="header-title">Cascade</h1>
+    </header>
+    <section>
+        <div id="editor" class="content-section">
+            <h2>Éditeur</h2>
+            <div class="f-row whitespace-margin">
+                <span class="link-style">Editer le code</span>
+                <a href="#htmlEditorDiv" class="tab-link" id="htmlEditorLink">html</a>
+                <a href="#cssEditorDiv" class="tab-link">css</a>
+            </div>
+            <div id="tabs">
+                <div id="htmlEditorDiv">
+                    <textarea id="htmlTextArea" class="CodeMirror" type="text/html"></textarea>
+                </div>
+                <div id="cssEditorDiv">
+                    <textarea id="cssTextArea" class="CodeMirror" type="text/css"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="content-section">
+            <h2>Résultat</h2>
+            <div class="f-row">
+                <button id="testAutoBtn" class="button button-blue">Tester Automatiquement</button>
+                <button id="testOnceBtn" class="button button-gray">Tester</button>
+            </div>
+            <iframe id="htmlIframeContainer" src="" frameborder="0"></iframe>
+        </div>
+    </section>
+</body>
+<!-- codemirror main & modes-->
+<script src="lib/codemirror.js"></script>
+<script src="lib/mode/css/css.js"></script>
+<script src="lib/mode/xml/xml.js"></script>
+<script src="lib/mode/htmlmixed/htmlmixed.js"></script>
+<!-- main scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="index.js"></script>
+<script src="tabs.js"></script>
+
+</html>
