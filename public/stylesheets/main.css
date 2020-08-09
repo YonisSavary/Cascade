@@ -1,0 +1,149 @@
+:root
+{
+    font-size: 18px;
+    font-family: sans-serif;
+    --light-gray : rgb(238, 238, 238);
+}
+
+html, body
+{
+    margin: 0;
+    padding: 0;
+    background-color: #222 ;
+    color: var(--light-gray);
+    width: 100%;
+    height: 100vh;
+}
+
+header
+{
+    height: 2rem;
+    padding: 1rem 1rem;
+    background: linear-gradient(deepskyblue,dodgerblue);
+}
+
+.header-title
+{
+    font-size: 1.4rem;
+    margin: 0px;
+}
+
+.f-row
+{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.f-column
+{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.f-text
+{
+    align-items: center;
+}
+
+.toolbar
+{
+    width: 100%;
+    height: 2rem;
+    padding: 0.2rem 0rem;
+    background-color: #333;
+}
+
+.toolbar-dark
+{
+    background-color: #222 ;
+}
+
+.toolbar img
+{
+    width: 1rem;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.f-share
+{
+    flex: 1 1 0px;
+}
+
+a
+{
+    color: var(--light-gray);
+    text-decoration-style: dashed;
+}
+
+.text-whitespace
+{
+    margin: 0 0.4rem;
+}
+
+.codeMirrorArea
+{
+    flex:1 1 auto;
+    margin-top:0;
+    height:100%;
+    position:relative;
+}
+
+.CodeMirror {
+position: relative;
+top:0;
+bottom:0;
+left:0;
+right:0;
+height:100%;
+}
+
+.limited-50
+{
+    max-width: 50%;
+}
+
+iframe
+{
+    border: none;
+    /*
+    background: repeating-linear-gradient(-45deg,
+        rgb(39, 39, 39) 0rem, 
+        rgb(39, 39, 39) 3rem, 
+        rgb(70, 70, 70) 3rem, 
+        rgb(70, 70, 70) 6rem)
+        */
+    background-color: white;
+}
+
+select, option, button
+{
+    color: var(--light-gray);
+    font-size: 1rem;
+    padding: 0.1rem 0.5rem;
+    background-color: #222 ;
+    font-family: sans-serif;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    border: dashed var(--light-gray) 1px;
+    margin-right: 1rem;
+}
+
+
+button
+{
+    border: solid var(--light-gray) 1px;
+    cursor: pointer;
+}
+
+.warning-text
+{
+    color: rgb(253, 239, 161);
+}
