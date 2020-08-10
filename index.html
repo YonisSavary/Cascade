@@ -16,14 +16,33 @@
         </header>
         <div class="toolbar f-row f-text">
             <span class="text-whitespace">Tester toutes les : </span>
-            <select id="testIntervalSelect">
-                <option selected value="-1">&lt;Test Manuel&gt;</option>
-                <option value="500">500ms</option>
-                <option value="5000">5s</option>
-                <option value="60000">1m</option>
-            </select>
-            <button id="manualBuildButton">Tester</button>
+            <div class="text-whitespace">
+                <select id="testIntervalSelect" class="select">
+                    <option class="option" selected value="-1">&lt;Test Manuel&gt;</option>
+                    <option class="option" value="500">500ms</option>
+                    <option class="option" value="2000">2s</option>
+                    <option class="option" value="10000">10s</option>
+                    <option class="option" value="60000">1m</option>
+                </select>
+                <button id="manualBuildButton">Tester</button>
+            </div>
+            <div class="text-whitespace f-row f-text">
+                <input type="checkbox" id="forceCssCheckBox"/>
+                <label for="forceCssCheckBox">CSS Forcé</label>
+                <div href="#cssForceToolTip" class="toolTipsBtn">!</div>
+                <div class="toolTipsContent" id="cssForceToolTip">
+                    Par défaut, le css est injecté dans la balise<br>
+                    style avec l'id "cascadeCss", si cette case est <br>
+                    cochée, le css sera injecté que la balise soit<br>
+                    là ou pas (pratique pour ne pas à avoir une balise <br>
+                    de test dans une page plus importante)
+                </div>
+            </div>
             <div class="f-share"></div>
+            <span class="text-whitespace f-row">
+                <div class="cascade-cursor-btn"></div>
+                <span class="text-whitespace fullscreen-only">/</span>
+            </span>
             <span class="text-whitespace">
                 <a href="#editorsDiv" class="fullscreen-only tabLink">Code</a>
                 <span class="text-whitespace fullscreen-only">/</span>
@@ -40,7 +59,7 @@
                     <a href="#htmlEditorDiv" class="tabLink" id="htmlEditorLink">HTML</a> 
                     <span class="text-whitespace">/</span>
                     <a href="#cssEditorDiv" class="tabLink">CSS</a>
-                    <span id="warningSpan" class=" text-whitespace warning-text"></span>
+                    <span id="infosSpan" class=" text-whitespace infos-text"></span>
                 </div>
                 <div id="editor" class="f-share">
                     <div id="htmlEditorDiv" class="codeMirrorArea">
@@ -64,6 +83,8 @@
     <script src="public/lib/mode/css.js"></script>
     <!-- website main js + jquery -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="public/js/cascade-cursor.js"></script>
     <script src="public/js/cascade.js"></script>
     <script src="public/js/tabs.js"></script>
+    <script src="public/js/toolTips.js"></script>
 </html>

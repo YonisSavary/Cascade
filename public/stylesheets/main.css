@@ -98,6 +98,7 @@ bottom:0;
 left:0;
 right:0;
 height:100%;
+z-index: 0;
 }
 
 .limited-50
@@ -118,7 +119,7 @@ iframe
     background-color: white;
 }
 
-select, option, button
+.select, .option, button
 {
     color: var(--light-gray);
     font-size: 1rem;
@@ -127,7 +128,7 @@ select, option, button
     font-family: sans-serif;
 }
 
-select {
+.select {
     -webkit-appearance: none;
     -moz-appearance: none;
     text-indent: 1px;
@@ -143,7 +144,12 @@ button
     cursor: pointer;
 }
 
-.warning-text
+.infos-text
 {
-    color: rgb(253, 239, 161);
+    color: rgb(201, 255, 179);
+}
+
+.CodeMirror *
+{
+    font-family: "consolas";
 }
